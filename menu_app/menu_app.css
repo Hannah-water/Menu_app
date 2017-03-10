@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;  
+  user-select: none;
+}
+body {
+  font: 14px 'Ubuntu Condensed', sans-serif;
+}
+.paper {
+  width: 280px;
+  height: 480px;
+  border-radius: 4px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.30);
+  margin: 50px auto;
+  overflow: hidden;
+}
+header#menu {
+  width: 100%;
+  height: 80px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,.15);
+  background: linear-gradient(135deg, #f7ffce, #e8e4ac);
+  color: #af9a50;
+  position: relative;
+  z-index: 5;
+}
+.title {
+  padding: 15px 0 0 20px;
+}
+.setting {
+  display: inline-block;
+  width: 12px;
+  cursor: pointer;
+}
+.setting span {
+  display: block;
+  height: 1px;
+  background: #af9a50;
+  margin-top: 3px;
+}
+.title>span {
+  margin-left: 8px;
+}
+.items-counter {
+  padding: 20px 20px 0 20px;
+  font-size: 13px;
+}
+#items-total {
+  margin-right: 6px;
+}
+.items-counter .action {
+  float: right;
+  cursor: pointer;
+}
+main#order {
+  width: 100%;
+  height: 400px;
+}
+.item {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  box-shadow: 0 5px 5px rgba(0,0,0,.15);
+  position: relative;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.item-name {
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+.item-icon {
+  width: 27%;
+  height: 25%;
+  margin-right: 10px;
+  float: left;
+}
+.item.coffee {
+  background: #f2d367;
+  color: #e47b57;
+  z-index: 4;
+}
+.item.sweet {
+  background: #e47b57;
+  color: #a7425c;
+  z-index: 3;
+}
+.item.food {
+  background: #a7425c;
+  color: #563761;
+  z-index: 2;
+}
+.item.drink {
+  background: #563761;
+  color: #1c1730;
+  z-index: 1;
+  border-radius: 0 0 4px 4px;
+}
+#order h1 {
+  line-height: 60px;
+  font-size: 21px;
+  font-weight: normal;
+}
+.detail {
+  font-size: 17px;
+  line-height: 35px;
+}
+.detail p {
+  display: inline;
+}
+.detail .counter {
+  float: right;
+}
+.detail .counter .number {
+  margin-right: 10px;
+}
+.detail .counter .minus, .plus {
+  display: inline-block;
+  width: 30px;
+  line-height: 20px;
+  background: #fff; 
+  text-align: center;
+  cursor: pointer;
+}
+.detail .counter .minus {
+  border-radius: 50px 0 0 50px;
+}
+.detail .counter .plus {
+  border-radius: 0 50px 50px 0;
+}
+
+/*
+ *active
+*/
+.paper.item-active .item {
+  /*the item not active*/
+  height: 60px;
+  padding: 0 20px
+}
+.paper.item-active .item.active {
+  width: 100%;
+  height: 260px;
+  padding: 20px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.paper.item-active .item:last-child.active {
+  /* the last item active */
+  margin-top: -40px;
+  z-index: 4;
+}
+.item.active .item-icon {
+  float: none;
+  margin: 0 auto;
+  -webkit-transform:scale(1.5) translateZ(0);
+  -moz-transform:scale(1.5) translateZ(0);
+  transform:scale(1.5) translateZ(0);
+}
+.item.active>h1 {
+  font-size: 31px !important;
+  text-align: center;
+}
+
+/* display: none; */
+.item .detail, .item .number, .items-counter .action {
+  display: none;
+}
+
